@@ -1,28 +1,22 @@
 ﻿namespace UserTicketService.Tests;
 
-[TestFixture]
-public class Tests
+public class CalculatorTests
 {
-    [SetUp]
-    public void Setup()
-    {
-    }
-
-    [Test]
+    [Fact]
     public void Subtraction_MustReturnCorrectValue()
     {
         Calculator calculator = new Calculator();
-        Assert.That(calculator.Subtraction(300, 10) == 290);
+        Assert.True(calculator.Subtraction(300, 10) == 290);
     }
 
-    [Test]
+    [Fact]
     public void Division_MustReturnCorrectValue()
     {
         var calculator = new Calculator();
-        Assert.That(calculator.Division(200, 10) == 20);
+        Assert.True(calculator.Division(200, 10) == 20);
     }
 
-    [Test]
+    [Fact]
     public void Division_MustThrowException()
     {
         var calculator = new Calculator();
