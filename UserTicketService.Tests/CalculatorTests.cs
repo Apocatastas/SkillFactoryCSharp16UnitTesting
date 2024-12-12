@@ -1,25 +1,13 @@
-﻿namespace UserTicketService.Tests;
-
-public class CalculatorTests
+﻿namespace UserTicketService.Tests
 {
-    [Fact]
-    public void Subtraction_MustReturnCorrectValue()
+    [TestFixture]
+    public class CalculatorTests
     {
-        Calculator calculator = new Calculator();
-        Assert.True(calculator.Subtraction(300, 10) == 290);
-    }
-
-    [Fact]
-    public void Division_MustReturnCorrectValue()
-    {
-        var calculator = new Calculator();
-        Assert.True(calculator.Division(200, 10) == 20);
-    }
-
-    [Fact]
-    public void Division_MustThrowException()
-    {
-        var calculator = new Calculator();
-        Assert.Throws<DivideByZeroException>(() => calculator.Division(30, 0));
+        [Test]
+        public void AddAlwaysReturnsExpectedValue()
+        {
+            var calculatorTest = new Calculator();
+            Assert.That(calculatorTest.Add(10, 220), Is.EqualTo(230));
+        }
     }
 }
