@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UserTicketService
+namespace Calculator
 {
     class Program
     {
@@ -9,3 +9,5 @@ namespace UserTicketService
         }
     }
 }
+
+
