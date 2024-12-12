@@ -23,6 +23,12 @@ namespace UserTicketService.Tests
             }
         }
 
+        public Ticket GetTicket(int ticketId)
+        {
+            var ticket = FakeBaseData.FirstOrDefault(t => t.Id == ticketId);
+            return (ticket is null) ?
+              throw new TicketNotFoundException() : ticket;
+        }
     }
 
     public class TicketNotFoundException : Exception
